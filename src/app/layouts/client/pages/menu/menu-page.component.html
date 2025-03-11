@@ -1,1 +1,22 @@
-<p>menu-page works!</p>
+<section class="w-full max-w-[100rem] mx-auto md:px-10 px-5">
+
+  <div class="grid w-full max-lg:grid-rows-2 lg:grid-cols-2">
+
+    <!-- Categories -->
+    <article class="space-y-5 py-[30px]">
+      <h2 class="text-2xl text-secondary">Categorías</h2>
+
+      <div class="flex flex-col">
+        <a routerLink="" routerLinkActive="border-l-2 border-primary-600 text-primary-600 font-semibold" class="px-4 py-1.5 uppercase border-l">Todos</a>
+        @for (categorie of categories; track categorie.id) {
+          <a routerLink="" class="px-4 py-1.5 uppercase border-l">{{categorie.name}}</a>
+        }
+      </div>
+
+
+    </article>
+
+    <!-- Products -->
+    <div></div>
+  </div>
+</section>
