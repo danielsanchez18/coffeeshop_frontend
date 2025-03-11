@@ -1,0 +1,119 @@
+<nav class="flex items-center justify-between w-full md:px-10 px-5 py-5 max-w-[100rem] mx-auto">
+
+  <!-- Logo -->
+  <article class="flex items-center gap-x-3">
+
+    <!-- Button Menu Responsive -->
+    <button type="button" class="flex md:hidden "
+      aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-offcanvas-example"
+      data-hs-overlay="#hs-offcanvas-example">
+      <lucide-icon name="menu" class="size-5"></lucide-icon>
+    </button>
+
+    <a routerLink="/" class="h-10 bg-red-500 sm:h-12">
+      <img src="/img/logo.png" alt="Tostao Café Logo" class="h-full">
+    </a>
+  </article>
+
+  <!-- Menu -->
+  <ul class="items-center hidden sm:flex gap-x-10">
+    <a routerLink="/" [routerLinkActiveOptions]="{ exact:true }" routerLinkActive="nav-menu-link-active"
+      class="nav-menu-link">Inicio</a>
+    <a routerLink="/menu" routerLinkActive="nav-menu-link-active" class="nav-menu-link">Menú</a>
+    <a routerLink="/nosotros" routerLinkActive="nav-menu-link-active" class="nav-menu-link">Nosotros</a>
+  </ul>
+
+
+  @if (!isLogged) {
+  <!-- Login / Signup  -->
+  <div class="flex items-center space-x-5 uppercase">
+    <a routerLink="/signup" class="hidden btn-link md:flex">Registrar</a>
+    <a routerLink="/login" class="btn-primary">Ingresar</a>
+  </div>
+  }
+  @else {
+  <section class="flex items-center gap-x-5 ">
+    <!-- Buttons Menu -->
+    <div class="items-center hidden gap-x-5 lg:flex">
+      <a routerLink="/carrito" class="hover:text-primary-600">
+        <lucide-icon name="shopping-bag" class="size-5"></lucide-icon>
+      </a>
+      <a routerLink="/notificaciones" class="hover:text-primary-600">
+        <lucide-icon name="bell" class="size-5"></lucide-icon>
+      </a>
+      <a routerLink="/chat" class="hover:text-primary-600">
+        <lucide-icon name="message-circle" class="size-5"></lucide-icon>
+      </a>
+
+    </div>
+
+    <!-- User -->
+    <div class="relative inline-flex hs-dropdown [--placement:bottom-right]">
+      <button id="hs-dropdown-default" type="button" class="flex items-center gap-x-2" aria-haspopup="menu"
+        aria-expanded="false" aria-label="Dropdown">
+        <div class="bg-gray-300 border rounded-full size-10">
+          <img
+            src="https://imgs.search.brave.com/JKWtafmSfeaSv6SkQ-PJKVciSc_VlPrTjjpd63rlC64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9w/b3J0cmFpdC1oYXB5/LXlvdW5nLXNtYXJ0/LW1hbi1nbGFzc2Vz/LXdoaXRlLXdhbGxf/MjMxMjA4LTEyMjA2/LmpwZz9zZW10PWFp/c19oeWJyaWQ"
+            alt="Photo User" class="object-cover rounded-full size-full">
+        </div>
+      </button>
+
+      <div
+        class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
+        role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+        <div class="p-1 space-y-0.5">
+          <a routerLink="/carrito" class="flex lg:hidden dropdown-link">
+            <lucide-icon name="shopping-bag" class="size-4"></lucide-icon>Carrito de Compras
+          </a>
+          <a routerLink="/carrito" class="flex lg:hidden dropdown-link">
+            <lucide-icon name="bell" class="size-4"></lucide-icon>Notificaciones
+          </a>
+          <a routerLink="/carrito" class="flex lg:hidden dropdown-link">
+            <lucide-icon name="message-circle" class="size-4"></lucide-icon>Mensajes
+          </a>
+          <a routerLink="/pedidos/1" class="dropdown-link">
+            <lucide-icon name="concierge-bell" class="size-4"></lucide-icon>Pedidos
+          </a>
+          <a routerLink="/perfil/1" class="dropdown-link">
+            <lucide-icon name="user-round" class="size-4"></lucide-icon>Perfil
+          </a>
+          <a routerLink="/logout" class="dropdown-link">
+            <lucide-icon name="log-out" class="size-4"></lucide-icon>Cerrar Sesión
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  }
+
+  <!-- Menu Responsive -->
+
+  <div id="hs-offcanvas-example"
+    class="fixed top-0 z-50 hidden w-full h-full max-w-xs transition-all duration-300 transform -translate-x-full bg-white border-gray-200 hs-overlay hs-overlay-open:translate-x-0 start-0 border-e"
+    role="dialog" tabindex="-1" aria-labelledby="hs-offcanvas-example-label">
+    <div class="flex items-center justify-between px-4 py-5 border-b border-gray-100">
+      <h3 id="hs-offcanvas-example-label" class="font-bold text-gray-800">
+        <img src="/img/logo.png" alt="Tostao Café Logo" class="h-10">
+      </h3>
+      <button type="button"
+        class="inline-flex items-center justify-center text-gray-800 bg-gray-100 border border-transparent rounded-full size-8 gap-x-2 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+        aria-label="Close" data-hs-overlay="#hs-offcanvas-example">
+        <lucide-icon name="x" class="size-5"></lucide-icon>
+      </button>
+    </div>
+    <section class="flex flex-col h-full px-5 py-5 bg-gray-100">
+      <div class="flex flex-col pb-5 uppercase border-b gap-y-1">
+        <a routerLink="/" [routerLinkActiveOptions]="{ exact:true }" routerLinkActive="menu-link-responsive-active"
+          class="menu-link-responsive">
+          <lucide-icon name="house" class="size-4"></lucide-icon>Inicio
+        </a>
+        <a routerLink="/menu" routerLinkActive="menu-link-responsive-active" class="menu-link-responsive">
+          <lucide-icon name="coffee" class="size-4"></lucide-icon>Menú</a>
+        <a routerLink="/nosotros" routerLinkActive="menu-link-responsive-active" class="menu-link-responsive">
+          <lucide-icon name="store" class="size-4"></lucide-icon>Nosotros
+        </a>
+      </div>
+    </section>
+  </div>
+
+</nav>

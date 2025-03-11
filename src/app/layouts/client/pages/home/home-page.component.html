@@ -1,0 +1,124 @@
+<!-- Banner Hero -->
+<section class="relative px-5 md:px-10 bg-background-color py-14 max-xl:space-y-20 xl:pb-40">
+
+  <img class="px-2 mx-auto md:p-0" src="img/banner-hero.svg" alt="">
+
+  <article class="relative flex flex-col w-full lg:justify-between xl:flex-row gap-y-10 sm:gap-y-5 xl:mt-[-15rem] xl:px-10 max-w-[100rem] mx-auto">
+
+    <div class="flex flex-col items-end space-y-2 xl:order-2 text-end lg:space-y-5">
+      <p class="text-sm sm:text-base lg:text-lg xl:text-xl max-w-72 xl:max-w-[20rem] xl:leading-tight">Tu lugar para disfrutar de un café único y momentos inolvidables. Ven y vive la experiencia</p>
+      <a routerLink="" class="uppercase btn-secondary xl:text-base">Visítanos ahora</a>
+    </div>
+
+    <div class="space-y-10 xl:order-1">
+      <div class="space-y-2 lg:space-y-5">
+        <p class="text-sm sm:text-base lg:text-lg xl:text-xl max-w-72 xl:max-w-[20rem] xl:leading-tight ">Tu momento perfecto está a un clic. Ordena ahora y descúbrelo.</p>
+        <a routerLink="" class="uppercase btn-secondary xl:text-base">Ordena Ahora</a>
+      </div>
+
+      <div class="hidden xl:flex">
+        <shared-social-media />
+      </div>
+
+    </div>
+  </article>
+
+  <article class="flex justify-center xl:hidden">
+    <shared-social-media />
+  </article>
+
+</section>
+
+
+
+<!-- Banner Burguer and Smoothie -->
+<section class="px-5 md:px-10 xl:px-20 max-w-[70rem] mx-auto py-32 space-y-20">
+  <div class="flex justify-end">
+    <h1 class="title-promocional text-end max-w-[600px] lg:max-w-[1000px]">Nuestros mejores productos, ahora a tu puerta. ¡Haz tu pedido y disfruta sin salir de casa!</h1>
+  </div>
+
+  <article class="flex items-center justify-between gap-10 mx-auto">
+    <div class="space-y-5 text-xs sm:text-base lg:text-lg max-w-[400px] w-full">
+      <p>Un delicioso y cremoso shake, servido frío y refrescante, con una variedad de sabores que combinan frescura y dulzura en cada sorbo.</p>
+      <img src="img/banner-smoothie.png" alt="Banner Smoothie">
+    </div>
+
+    <div class="space-y-5 text-xs sm:text-base lg:text-lg max-w-[400px] w-full">
+      <img src="img/banner-burguer.png" alt="Banner Burguer">
+      <p class="text-end">Hamburguesas jugosas y sabrosas, preparadas con los mejores ingredientes, perfectas para disfrutar en cualquier momento. ¡Una experiencia de sabor única!</p>
+    </div>
+  </article>
+
+  <div class="flex justify-center">
+    <a routerLink="" class="uppercase xl:text-lg btn-primary">Hechale un vistazo</a>
+  </div>
+</section>
+
+
+
+<!-- Banner Products -->
+<section class="px-5 py-10 mx-auto space-y-10 md:px-10 xl:px-20">
+  <div class="flex justify-center">
+    <h1 class="text-2xl md:text-3xl">Nuestros Productos</h1>
+  </div>
+
+  <div class="flex mx-auto sm:space-x-5 md:space-x-10 w-fit">
+    <a routerLink="" class="px-4 py-3 text-sm font-medium uppercase border md:text-lg text-secondary border-secondary">Bebidas</a>
+    <a routerLink="" class="px-4 py-3 text-sm font-medium uppercase md:text-lg">Snacks</a>
+    <a routerLink="" class="px-4 py-3 text-sm font-medium uppercase md:text-lg">Helados</a>
+    <a routerLink="" class="px-4 py-3 text-sm font-medium uppercase md:text-lg">Pasteles</a>
+  </div>
+
+  <article class="max-lg:overflow-x-auto">
+    <div class="flex items-center mx-auto w-fit gap-x-5">
+      <shared-product-card />
+      <shared-product-card />
+      <shared-product-card />
+      <shared-product-card />
+      <shared-product-card />
+    </div>
+  </article>
+
+  <div class="flex justify-center">
+    <a routerLink="" class="uppercase xl:text-lg btn-primary">Ver más</a>
+  </div>
+</section>
+
+
+
+<!-- Banner Snacks -->
+<section class="py-10 space-y-10 px-5 md:px-10 xl:pt-20 xl:pb-40 max-w-[75rem] mx-auto">
+
+  <div>
+    <img src="img/banner-snacks.png" alt="Banner Snacks">
+  </div>
+
+  <article class="space-y-10 lg:space-y-0 lg:flex lg:items-center lg:justify-between lg:gap-x-20">
+    <div class="flex flex-col justify-center space-y-3 max-lg:items-center">
+      <h2 class="text-lg max-lg:text-center md:text-xl">Disfruta de un menú completo, de principio a fin del día. <br> ¡Todo lo que buscas en un solo lugar!</h2>
+      <a routerLink="" class="uppercase btn-secondary">Ver categorías</a>
+    </div>
+
+    <div class="grid items-center w-full grid-cols-3 gap-x-2 ">
+      <!-- Breakfast -->
+      <a routerLink="" class="relative w-full">
+        <div class="lg:min-h-[150px] min-h-[100px] bg-gray-300 rounded-lg"></div>
+        <p class="absolute text-lg font-medium text-white start-4 font-secondary bottom-5">Desayunos</p>
+      </a>
+
+      <!-- Lunch -->
+      <a routerLink="" class="relative w-full">
+        <div class="lg:min-h-[150px] min-h-[100px] bg-gray-300 rounded-lg"></div>
+        <p class="absolute text-lg font-medium text-white start-4 font-secondary bottom-5">Almuerzos</p>
+      </a>
+
+      <!-- Dinner -->
+      <a routerLink="" class="relative w-full">
+        <div class="lg:min-h-[150px] min-h-[100px] bg-gray-300 rounded-lg"></div>
+        <p class="absolute text-lg font-medium text-white start-4 font-secondary bottom-5">Cenas</p>
+      </a>
+    </div>
+  </article>
+
+
+</section>
